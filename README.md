@@ -50,6 +50,13 @@
 
 ![额度动画](assets/preview_usage.gif)
 
+<details>
+<summary>另一种 UI 风格：纯像素矩阵（左 CODEX 文字 + 右三色方灯，暗灯保持 30% 亮度）</summary>
+
+![像素矩阵预览](assets/preview_pixel_matrix.svg)
+
+</details>
+
 ## 软硬件要求
 
 **硬件**
