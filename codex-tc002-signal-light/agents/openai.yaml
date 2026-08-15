@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex TC002 Signal Light"
+  short_description: "Build reliable Codex status lights for TC002"
+  default_prompt: "Use $codex-tc002-signal-light to install and verify a Codex status light on my TC002."

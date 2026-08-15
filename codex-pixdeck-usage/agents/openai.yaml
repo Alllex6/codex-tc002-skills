@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex PixDeck Usage"
+  short_description: "Monitor Codex weekly usage and push it to PixDeck"
+  default_prompt: "Use $codex-pixdeck-usage to monitor my Codex Weekly limit and update my PixDeck clock via HTTP."

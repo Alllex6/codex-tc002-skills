@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Pixdeck Traffic Light"
+  short_description: "Sync Codex task states to Pixdeck traffic lights"
+  default_prompt: "Use $codex-pixdeck-traffic-light to configure automatic Codex RUN, ASK, DONE status lights on my Pixdeck device."
