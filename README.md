@@ -39,23 +39,27 @@
 
 ## 能呈现什么效果
 
-| 模块 | 屏幕效果 |
-|---|---|
-| 额度显示 `codex-pixdeck-usage` | 白字 `CODEX` + 彩色 `WK XX%`，按剩余量变色（绿≥50% / 黄≥20% / 红<20%） |
-| 状态红绿灯 `codex-pixdeck-traffic-light` | 三盏圆灯：RUN 黄 / ASK 红（待审批）/ DONE 绿，空闲转暗灯；多会话严格优先级聚合 |
+### 额度显示（`codex-pixdeck-usage`）
 
-![总览](assets/preview_overview.png)
-
-![红绿灯动画](assets/preview_traffic_light.gif)
+白字 `CODEX` + 彩色 `WK XX%`，按剩余量变色（绿 ≥ 50% / 黄 ≥ 20% / 红 < 20%）
 
 ![额度动画](assets/preview_usage.gif)
 
-<details>
-<summary>另一种 UI 风格：纯像素矩阵（左 CODEX 文字 + 右三色方灯，暗灯保持 30% 亮度）</summary>
+### 状态红绿灯（`codex-pixdeck-traffic-light`）
+
+三盏灯反映运行状态：**RUN 黄**（执行中）/ **ASK 红**（待审批）/ **DONE 绿**（完成），空闲转暗灯待机；多会话严格按「红 > 黄 > 绿 > 待机」优先级聚合。
+
+**UI 风格 A — 设备渲染版**（圆形灯 + 辉光 + `RUN`/`ASK`/`DONE` 文字标签）
+
+![红绿灯动画](assets/preview_traffic_light.gif)
+
+**UI 风格 B — 像素矩阵版**（方形灯 + 左侧 `CODEX` 文字，暗灯保持 30% 亮度始终可见）
 
 ![像素矩阵预览](assets/preview_pixel_matrix.svg)
 
-</details>
+### 四状态总览
+
+![总览](assets/preview_overview.png)
 
 ## 软硬件要求
 
@@ -87,12 +91,20 @@ python codex-pixdeck-traffic-light/scripts/codex_pixdeck_watcher.py --device <IP
 ```
 .
 ├── README.md
-├── LICENSE                 # GPL-3.0（衍生自 PixDeck）
-├── assets/                 # 预览图与 GIF
-├── codex-pixdeck-usage/          # 额度显示 Skill
-├── codex-pixdeck-traffic-light/  # 红绿灯 Skill（含可运行脚本）
-└── codex-tc002-signal-light/     # 红绿灯规范版（构建指引，无脚本）
+├── LICENSE                      # GPL-3.0（衍生自 PixDeck）
+├── CONTRIBUTING.md              # 贡献指南
+├── requirements.txt             # 零依赖说明
+├── .github/workflows/           # CI（flake8 语法检查）
+├── assets/                      # 预览图与 GIF
+├── codex-pixdeck-usage/         # 额度显示 Skill
+├── codex-pixdeck-traffic-light/ # 红绿灯 Skill（含可运行脚本）
+└── codex-tc002-signal-light/    # 红绿灯规范版（构建指引，无脚本）
 ```
+
+## 致谢
+
+- [PixDeck](https://github.com/cailurus/PixDeck)（cailurus）—— 本项目的协议设计与功能灵感来源
+- [Ulanzi](https://www.ulanzi.com/) —— TC002 像素时钟硬件
 
 ## 许可证
 
